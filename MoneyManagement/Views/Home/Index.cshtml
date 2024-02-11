@@ -1,0 +1,52 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/64x64.png">
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="manifest" href="~/manifest.json">
+    <title>Money management</title>
+</head>
+
+<body>
+    <form method="post" asp-controller="Home" asp-action="addToList">
+        <label>
+            What did you buy
+            <textarea name="Name" placeholder="The name of the purchase you made"></textarea>
+        </label>
+        <label for="input">
+            What was the price of what you bought?
+            <input id="input" name="price" placeholder="price" type="number">
+        </label>
+        <label>
+            Which card did you buy with?
+            <select name="cardNumber">
+                <option value="Select1">Select</option>
+                @{
+                    @foreach (var item in ViewBag.List)
+                    {
+                        <option value="@item.CardNumber">@item.CardNumber</option>
+
+                    }
+                }
+
+            </select>
+        </label>
+        <label for="input">
+            when did you buy
+            <input id="input" name="date" placeholder="input" type="date">
+        </label>
+        <label for="input">
+            <input class="Lastinput" name="input" value="submit" type="submit">
+        </label>
+        <label for="input">
+            <input class="Lastinput" name="input" value="watch data" asp-action="WatchData" asp-controller="home" type="submit">
+        </label>
+    </form>
+    <script src="~/js/sw.js"></script>
+</body>
+
+</html>
