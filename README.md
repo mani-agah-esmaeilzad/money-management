@@ -40,6 +40,6 @@ Email: maniagahdev@gmail.com
 
 Contact us: https://maniagah.ir/home/Contact
 
-Instagram: @mani.aspx
+Instagram: https://www.instagram.com/mani.aspx
 
 We welcome your collaboration to improve this application!
